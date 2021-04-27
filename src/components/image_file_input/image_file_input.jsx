@@ -17,7 +17,6 @@ const ImageFileInput = ({ imageUploader, name, onFileChange }) => {
       name: uploaded.original_filename,
       url: uploaded.url,
     });
-    console.log(name);
   };
 
   return (
