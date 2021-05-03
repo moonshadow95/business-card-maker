@@ -2,25 +2,27 @@
 
 .form {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
+  width: 100%;
   border-top: 1px solid makerBlack;
   border-left: 1px solid makerBlack;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 .input,
 .textarea,
 .select,
-.button,
 .fileInput {
+  border: 0;
   font-size: 0.8rem;
   width: 100%;
-  border: 0;
   padding: 0.5em;
   border-bottom: 1px solid makerBlack;
   border-right: 1px solid makerBlack;
-  background-color: makerWhite;
+}
+
+.textarea {
+  resize: none;
 }
 
 .input,
@@ -28,7 +30,8 @@
   flex: 1 1 30%;
 }
 
-.fileInput {
+.fileInput,
+.button {
   padding: 0;
   flex: 1 1 50%;
 }
@@ -38,8 +41,4 @@
 .select:focus,
 .button:focus {
   outline: 0;
-}
-
-.textarea {
-  flex-basis: 100%;
 }

@@ -6,63 +6,60 @@ import Header from '../header/header';
 import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
-const Maker = ({ FileInput, authService, cardRepository }) => {
+const Maker = ({ authService }) => {
+  const [cards, setCards] = useState([
+    {
+      id: 1,
+      name: 'Ji Soo',
+      company: 'HoduBoom',
+      theme: 'colorful',
+      title: 'Patissiere',
+      email: 'js1008@naver.com',
+      message: "I'm gonna be rich",
+      fileName: 'Photo_soo',
+      fileURL: '',
+    },
+    {
+      id: 2,
+      name: 'Kwang Su',
+      company: 'HappyTree',
+      theme: 'light',
+      title: 'Interior contractor',
+      email: 'k_su@naver.com',
+      message: 'I want the Mercedes-Benz',
+      fileName: 'Photo_su',
+      fileURL: '',
+    },
+    {
+      id: 3,
+      name: 'Ji Soo',
+      company: 'HoduBoom',
+      theme: 'dark',
+      title: 'Patissiere',
+      email: 'js1008@naver.com',
+      message: "I'm gonna be rich",
+      fileName: 'Photo_soo',
+      fileURL: '',
+    },
+  ]);
   const history = useHistory();
-  const historyState = history?.location?.state;
-  const [cards, setCards] = useState({});
-  const [userId, setUserId] = useState(historyState && historyState.id);
-
   const onLogout = () => {
     authService.logout();
   };
 
   useEffect(() => {
-    if (!userId) {
-      return;
-    }
-    const stopSync = cardRepository.syncCards(userId, (cards) => {
-      setCards(cards);
-    });
-    return () => stopSync();
-  }, [userId]);
-
-  useEffect(() => {
     authService.onAuthChange((user) => {
-      if (user) {
-        setUserId(user.uid);
-      } else {
+      if (!user) {
         history.push('/');
       }
     });
   });
 
-  const createOrUpdateCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      updated[card.id] = card;
-      return updated;
-    });
-    cardRepository.saveCard(userId, card);
-  };
-  const deleteCard = (card) => {
-    setCards((cards) => {
-      const updated = { ...cards };
-      delete updated[card.id];
-      return updated;
-    });
-  };
-
   return (
     <section className={styles.maker}>
       <Header onLogout={onLogout} />
       <div className={styles.container}>
-        <Editor
-          FileInput={FileInput}
-          cards={cards}
-          addCard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
-          deleteCard={deleteCard}
-        />
+        <Editor cards={cards} />
         <Preview cards={cards} />
       </div>
       <Footer />
