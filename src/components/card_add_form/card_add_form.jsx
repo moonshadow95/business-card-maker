@@ -1,9 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Button from '../button/button';
-import ImgFileInput from '../img_file_input/img_file_input';
 import styles from './card_add_form.module.css';
 
-const CardAddForm = ({ addCard }) => {
+const CardAddForm = ({ FileInput, onAdd }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -11,6 +10,11 @@ const CardAddForm = ({ addCard }) => {
   const titleRef = useRef();
   const emailRef = useRef();
   const messageRef = useRef();
+  const [file, setFile] = useState({ fileName: null, fileURL: null });
+
+  const onFileChange = (file) => {
+    setFile({ fileName: file.name, fileURL: file.url });
+  };
 
   const onsubmit = (event) => {
     event.preventDefault();
@@ -22,11 +26,12 @@ const CardAddForm = ({ addCard }) => {
       title: titleRef.current.value || '',
       email: emailRef.current.value || '',
       message: messageRef.current.value || '',
-      fileName: '',
-      fileURL: '',
+      fileName: file.fileName || '',
+      fileURL: file.fileURL || '',
     };
     formRef.current.reset();
-    addCard(card);
+    setFile({ fileName: null, fileURL: null });
+    onAdd(card);
   };
 
   return (
@@ -71,7 +76,7 @@ const CardAddForm = ({ addCard }) => {
         placeholder="message"
       ></textarea>
       <div className={styles.fileInput}>
-        <ImgFileInput name="Add Image" />
+        <FileInput name={file.fileName} onFileChange={onFileChange} />
       </div>
       <div className={styles.button}>
         <Button name="Add" onClick={onsubmit} />

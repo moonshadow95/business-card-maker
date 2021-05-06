@@ -1,19 +1,17 @@
 import React from 'react';
 import Button from '../button/button';
-import ImgFileInput from '../img_file_input/img_file_input';
 import styles from './card_edit_form.module.css';
 
-const CardEditForm = ({ card, updateCard, deleteCard }) => {
-  const {
-    name,
-    company,
-    theme,
-    title,
-    email,
-    message,
-    fileName,
-    fileURL,
-  } = card;
+const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
+  const { name, company, theme, title, email, message, fileName } = card;
+
+  const onFileChange = (file) => {
+    updateCard({
+      ...card,
+      fileName: file.name,
+      fileURL: file.url,
+    });
+  };
 
   const onChange = (event) => {
     if (event.currentTarget == null) {
@@ -75,7 +73,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         onChange={onChange}
       ></textarea>
       <div className={styles.fileInput}>
-        <ImgFileInput name="Add Image" />
+        <FileInput name={fileName} onFileChange={onFileChange} />
       </div>
       <div className={styles.button}>
         <Button name="Delete" onClick={onsubmit} />

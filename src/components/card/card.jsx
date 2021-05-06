@@ -24,7 +24,7 @@ const Card = ({ card }) => {
         <p className={styles.title}>{title}</p>
         <p className={styles.email}>E-mail : {email}</p>
         <p className={styles.message}>
-          <i class="fab fa-connectdevelop"></i>
+          <i className="fab fa-connectdevelop"></i>
           {message}
         </p>
       </div>
