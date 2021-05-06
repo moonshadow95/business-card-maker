@@ -3,7 +3,7 @@ import Button from '../button/button';
 import ImgFileInput from '../img_file_input/img_file_input';
 import styles from './card_add_form.module.css';
 
-const CardAddForm = ({ onAdd }) => {
+const CardAddForm = ({ addCard }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -26,7 +26,7 @@ const CardAddForm = ({ onAdd }) => {
       fileURL: '',
     };
     formRef.current.reset();
-    onAdd(card);
+    addCard(card);
   };
 
   return (
