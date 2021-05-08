@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './img_file_input.module.css';
 
 const ImgFileInput = ({ imgUploader, name, onFileChange }) => {
+  const [loading, setLoading] = useState(false);
   const inputRef = useRef();
 
   const onButtonClick = (event) => {
@@ -10,7 +11,9 @@ const ImgFileInput = ({ imgUploader, name, onFileChange }) => {
   };
 
   const onInputChange = async (event) => {
+    setLoading(true);
     const uploaded = await imgUploader.upload(event.target.files[0]);
+    setLoading(false);
     onFileChange({
       name: uploaded.original_filename,
       url: uploaded.url,
@@ -27,9 +30,15 @@ const ImgFileInput = ({ imgUploader, name, onFileChange }) => {
         name="file"
         onChange={onInputChange}
       />
-      <button className={styles.button} onClick={onButtonClick}>
-        {name || 'Upload image'}
-      </button>
+      {!loading && (
+        <button
+          className={`${styles.button} ${name ? styles.img : styles.noimg}`}
+          onClick={onButtonClick}
+        >
+          {name || 'Upload image'}
+        </button>
+      )}
+      {loading && <div className={styles.loading}></div>}
     </div>
   );
 };
