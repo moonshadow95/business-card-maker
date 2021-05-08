@@ -1,10 +1,10 @@
 @value makerLightGrey from '../../common/colors.css';
-
 .editor {
   flex-basis: 50%;
   text-align: center;
   border-right: 1px solid makerLightGrey;
   padding: 0 4em;
+  overflow-y: auto;
 }
 
 .title {

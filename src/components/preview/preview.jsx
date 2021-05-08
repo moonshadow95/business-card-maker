@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../card/card';
-import styles from './preivew.module.css';
+import styles from './preview.module.css';
 
 const Preview = ({ cards }) => (
   <section className={styles.preview}>

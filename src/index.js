@@ -6,8 +6,10 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import AuthService from './service/auth_service';
 import ImgUploader from './service/img_uploader';
 import ImgFileInput from './components/img_file_input/img_file_input';
+import CardRepository from './service/card_repository';
 
 const authService = new AuthService();
+const cardRepository = new CardRepository();
 const imgUploader = new ImgUploader();
 const FileInput = (props) => (
   <ImgFileInput {...props} imgUploader={imgUploader} />
@@ -20,7 +22,11 @@ const FileInput = (props) => (
 
 ReactDOM.render(
   <React.StrictMode>
-    <App authService={authService} FileInput={FileInput} />
+    <App
+      authService={authService}
+      FileInput={FileInput}
+      cardRepository={cardRepository}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
