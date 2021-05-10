@@ -1,7 +1,22 @@
+@value makerLightGrey from '../../common/colors.css';
 .preview {
   flex-basis: 50%;
   text-align: center;
   overflow-y: auto;
+}
+
+.preview::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+}
+
+.preview::-webkit-scrollbar-thumb {
+  background-color: makerLightGrey;
+  border-radius: 4rem;
+}
+
+.preview:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 199, 199);
 }
 
 .title {

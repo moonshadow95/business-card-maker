@@ -35,6 +35,7 @@ const ImgFileInput = ({ imgUploader, name, onFileChange }) => {
           className={`${styles.button} ${name ? styles.img : styles.noimg}`}
           onClick={onButtonClick}
         >
+          <i className={`fas fa-file-${name ? 'image' : 'upload'}`}></i>
           {name || 'Upload image'}
         </button>
       )}

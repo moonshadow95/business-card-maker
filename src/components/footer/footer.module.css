@@ -10,3 +10,7 @@
   margin: 0;
   color: makerWhite;
 }
+
+svg {
+  margin-left: 0.5em;
+}

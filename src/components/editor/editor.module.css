@@ -7,6 +7,20 @@
   overflow-y: auto;
 }
 
+.editor::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.5rem;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background-color: makerLightGrey;
+  border-radius: 4rem;
+}
+
+.editor:hover::-webkit-scrollbar-thumb {
+  background-color: rgb(199, 199, 199);
+}
+
 .title {
   margin: 2em;
 }
