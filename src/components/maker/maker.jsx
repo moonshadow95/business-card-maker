@@ -31,7 +31,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     });
     // stopSync() 컴포넌트가 언마운트되면 실행
     return () => stopSync();
-  }, [userId]);
+  }, [userId, cardRepository]);
 
   useEffect(() => {
     authService.onAuthChange((user) => {
@@ -41,7 +41,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         history.push('/');
       }
     });
-  });
+  }, [authService, userId, history]);
 
   const creadteOrUpdateCard = (newCard) => {
     // map을 이용하여 동일한 id를 가진 아이템을 찾으려면

@@ -4,20 +4,11 @@ import styles from './card.module.css';
 const Card = ({ card }) => {
   // deconstructing => card., card. 반복을 피함
   const DEFAULT_IMG = '/images/default_logo.png';
-  const {
-    name,
-    company,
-    theme,
-    title,
-    email,
-    message,
-    fileName,
-    fileURL,
-  } = card;
+  const { name, company, theme, title, email, message, fileURL } = card;
   const url = fileURL || DEFAULT_IMG;
   return (
     <li className={`${styles.card} ${getThemeStyle(theme)}`}>
-      <img className={styles.avatar} src={url} alt="profile photo" />
+      <img className={styles.avatar} src={url} alt="profile" />
       <div className={styles.info}>
         <h1 className={styles.name}>{name}</h1>
         <p className={styles.company}>{company}</p>
