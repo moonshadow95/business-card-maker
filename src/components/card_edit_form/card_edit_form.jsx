@@ -3,7 +3,7 @@ import Button from '../button/button';
 import styles from './card_edit_form.module.css';
 
 const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
-  const { name, company, title, email, message, fileName } = card;
+  const { name, company, title, theme, email, message, fileName } = card;
 
   const onFileChange = (file) => {
     updateCard({
@@ -47,7 +47,12 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         value={company}
         onChange={onChange}
       />
-      <select className={styles.select} name="theme" onChange={onChange}>
+      <select
+        className={styles.select}
+        name="theme"
+        onChange={onChange}
+        value={theme}
+      >
         <option value="light">light</option>
         <option value="dark">dark</option>
         <option value="colorful">colorful</option>
