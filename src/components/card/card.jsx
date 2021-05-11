@@ -13,7 +13,7 @@ const Card = ({ card }) => {
         <h1 className={styles.name}>{name}</h1>
         <p className={styles.company}>{company}</p>
         <p className={styles.title}>{title}</p>
-        <p className={styles.email}>E-mail : {email}</p>
+        <p className={styles.email}>{email}</p>
         <p className={styles.message}>
           <i className="fab fa-connectdevelop"></i>
           {message}
