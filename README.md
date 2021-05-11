@@ -31,9 +31,10 @@ _Make your business Card_
 
 ## 3. Over View
 
-<img width="53%" src="https://user-images.githubusercontent.com/73153617/115197854-6c261480-a12c-11eb-9b0a-d4809cb279db.png">
-<img width="22%" src="https://user-images.githubusercontent.com/73153617/115197860-6defd800-a12c-11eb-8c69-a48102eb9b9f.png">
-<img width="14%" src="https://user-images.githubusercontent.com/73153617/115197846-6a5c5100-a12c-11eb-90ae-5327828993dc.png">
+<img width="49%" src="https://user-images.githubusercontent.com/73153617/117763195-60c69480-b265-11eb-932c-32e440daaaf8.png">
+<img width="49%" src="https://user-images.githubusercontent.com/73153617/117763186-5c01e080-b265-11eb-857b-27be7b5261f2.png">
+<img width="28%" src="https://user-images.githubusercontent.com/73153617/117763227-6e7c1a00-b265-11eb-9478-1631a83b11be.png">
+<img width="18%" src="https://user-images.githubusercontent.com/73153617/117763230-6fad4700-b265-11eb-8dc9-9775935850e6.png">
 
 ## 4. About Project
 
@@ -41,20 +42,32 @@ Demo Link ⇒
 
 ### 🔑 Login Page
 
-<img width="49%" src="https://user-images.githubusercontent.com/73153617/115197991-8cee6a00-a12c-11eb-980a-1b21e7e26b1a.png">
-<img width="49%" src="https://user-images.githubusercontent.com/73153617/115199964-b5776380-a12e-11eb-8d85-2c1c4b6fc113.png">
-<img width="49%" src="https://user-images.githubusercontent.com/73153617/115199970-b7412700-a12e-11eb-926c-6685e7e30743.png">
-<img width="49%" src="https://user-images.githubusercontent.com/73153617/115199976-b8725400-a12e-11eb-9662-22a69e5c033a.png">
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/117763549-f5c98d80-b265-11eb-9d25-8b1ea7bd7569.gif">
 
     - Login with Google or Github or Facebook
-    - Even if you log out, your card information will be shown again when you log in.
+
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/117763977-b485ad80-b266-11eb-9e75-08b8d95e2476.gif">
+
+    - If you are logged in, you will be logged in automatically even if you return to the login page.
+
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/117763677-2c070d00-b266-11eb-83a1-06339e595a79.gif">
+
+    - Even if you log out, your card information will be shown again when you log in again.
 
 ### 📝 Maker Page
 
-<img width="100%" src="https://user-images.githubusercontent.com/73153617/115191332-3ed56880-a124-11eb-97c2-3e7585722feb.PNG"/>
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/117764255-29f17e00-b267-11eb-9829-67281714cb8c.gif"/>
 
-    - If you enter information in the left editor section, you can see a preview of your business card in the right preview section at the same time.
+    - Enter information on the left maker side, upload a image and press the add button, you will see the result on the right preview side.
 
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/117764268-2f4ec880-b267-11eb-82cc-8fe31c925bdd.gif"/>
+
+    - If you edit information in the left maker section, you can see a preview of your business card in the preview side at the same time.
+
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/117764264-2cec6e80-b267-11eb-93f3-6bca5b5407e7.gif"/>
+    
+    - Add and Delete 
+    
 ## 5. Architecture
 
 ### 👑 Most popular videos (default page)

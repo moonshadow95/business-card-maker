@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './card.module.css';
 
 const Card = ({ card }) => {
-  // deconstructing => card., card. 반복을 피함
   const DEFAULT_IMG = '/images/default_logo.png';
+  // deconstructing => card., card. 반복을 피함
   const { name, company, theme, title, email, message, fileURL } = card;
   const url = fileURL || DEFAULT_IMG;
   return (
