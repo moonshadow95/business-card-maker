@@ -26,10 +26,10 @@ _Make your business Card_
 
 ## 3. Over View
 
-<img width="48%" src="https://user-images.githubusercontent.com/73153617/117763195-60c69480-b265-11eb-932c-32e440daaaf8.png">
-<img width="48%" src="https://user-images.githubusercontent.com/73153617/117763186-5c01e080-b265-11eb-857b-27be7b5261f2.png">
-<img width="28%" src="https://user-images.githubusercontent.com/73153617/117763227-6e7c1a00-b265-11eb-9478-1631a83b11be.png">
-<img width="18%" src="https://user-images.githubusercontent.com/73153617/117763230-6fad4700-b265-11eb-8dc9-9775935850e6.png">
+<img width="40%" src="https://user-images.githubusercontent.com/73153617/117763195-60c69480-b265-11eb-932c-32e440daaaf8.png">
+<img width="40%" src="https://user-images.githubusercontent.com/73153617/117763186-5c01e080-b265-11eb-857b-27be7b5261f2.png">
+<img width="25%" src="https://user-images.githubusercontent.com/73153617/117763227-6e7c1a00-b265-11eb-9478-1631a83b11be.png">
+<img width="15%" src="https://user-images.githubusercontent.com/73153617/117763230-6fad4700-b265-11eb-8dc9-9775935850e6.png">
 
 ## 4. About Project
 
