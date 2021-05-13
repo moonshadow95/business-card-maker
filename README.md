@@ -70,41 +70,24 @@ Demo Link ⇒
     
 ## 5. Architecture
 
-### 👑 Most popular videos (default page)
+### Overall
 
-![structure1](https://user-images.githubusercontent.com/73153617/115323726-9676e100-a1c3-11eb-8ade-6e5294edd8af.png)
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/118086560-20028300-b3ff-11eb-9864-22ebaa6ce778.png" />
+<img width="100%" src="https://user-images.githubusercontent.com/73153617/118088132-91dbcc00-b401-11eb-855d-6d93da11a52d.gif"/>
 
-    1. When the app component mounted(useEffect()), get most popular videos using YouTube API.
-    2. Send props to video list component, video item component.
-    3. Render video items in video list.
-
-### 🔎 Search by keyword
-
-![structure2](https://user-images.githubusercontent.com/73153617/115323720-94148700-a1c3-11eb-9d14-4a6c431510d9.png)
-
-    1. Get keyword from input.
-    2. App state has changed.
-    3. Get the corresponding videos.
-    4. Update and render video list and item.
-
-### 📺 Play video
-
-![structure3](https://user-images.githubusercontent.com/73153617/115323723-95de4a80-a1c3-11eb-8261-55d9dca2b894.png)
-
-    1. Video click.
-    2. App state has changed.
-    3. Get clicked item's video url using YouTube API.
-    4. Show the video by ifram tag.
+    1. When the login button is clicked, run the login function.
+    2. Firebase authenticates the user.
+    3. React Router send the user to Maker page
+    4-5-6. If the user has own data, Firebase's database get the data and get image from Cloudinary.
+    7. Editor section and Preview section shows the data.
+    8. When the user changes the data, it changes in the database as well as the data shown in Preview section.
 
 ## 6. 📝 What I've learned
 
-    - Understanding 'state' and 'props' of react
-    - How to use React Hooks
-    - How to use PostCSS
-    - How to use Public API and Postman
-
-## 7. 💥 Issue
-
-    I wanted to include channel information in each video item, but there was an issu with over quota.
-        => Sometimes I have to make the function simpler for the performence.
-        => Distribute the quota using multiple api keys.
+    - How to route using React Router.
+    - Understand what dependency injection is.
+    - How to authenticate users with Firebase.
+    - How to use Firebase SDK(Software Development Kit).
+    - How to treat data in object form.
+    - How to use Firebase Realtime database.
+    - How to use Cloudinary to upload media files.
