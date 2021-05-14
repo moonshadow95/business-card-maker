@@ -14,6 +14,7 @@ Demo Link => https://609e02e6eafbe46d09c18459--business-card-maker-react.netlify
 4. [About Project](#4-About-Project)
 5. [Architecture](#5-Architecture)
 6. [What I've learned](#6--What-Ive-learned)
+7. [Issue](#7--Issue)
 
 ## 1. Purpose of this project
 
