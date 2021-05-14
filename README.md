@@ -83,3 +83,7 @@ Demo Link ⇒
     - How to treat data in object form.
     - How to use Firebase Realtime database.
     - How to use Cloudinary to upload media files.
+
+## 7. 💥 Issue
+
+    -

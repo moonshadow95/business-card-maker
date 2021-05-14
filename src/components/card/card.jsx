@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './card.module.css';
 
-const Card = ({ card }) => {
+const Card = memo(({ card }) => {
   const DEFAULT_IMG = '/images/default_logo.png';
   // deconstructing => card., card. 반복을 피함
   const { name, company, theme, title, email, message, fileURL } = card;
@@ -21,7 +21,7 @@ const Card = ({ card }) => {
       </div>
     </li>
   );
-};
+});
 
 // theme에 맞춰 스타일 설정
 function getThemeStyle(theme) {

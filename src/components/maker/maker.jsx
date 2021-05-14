@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import Editor from '../editor/editor';
 import Footer from '../footer/footer';
@@ -18,9 +18,11 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
 
   const history = useHistory();
 
-  const onLogout = () => {
+  // useCallback() => state or prop 이 변경되어도 함수를 새로 만들지 않고 동일한 콜백을 계속 사용한다.
+  // authService는 예외로 변경되면 새로 만들어진다.
+  const onLogout = useCallback(() => {
     authService.logout();
-  };
+  }, [authService]);
 
   useEffect(() => {
     if (!userId) {

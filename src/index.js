@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import ReactDOM from 'react-dom';
 import './index.module.css';
 import App from './app';
@@ -11,9 +11,9 @@ import CardRepository from './service/card_repository';
 const authService = new AuthService();
 const cardRepository = new CardRepository();
 const imgUploader = new ImgUploader();
-const FileInput = (props) => (
+const FileInput = memo((props) => (
   <ImgFileInput {...props} imgUploader={imgUploader} />
-);
+));
 //
 // 새로운 props를 전달하고싶다면 하위컴포넌트를 변경할 필요 없이
 // 이곳에서만 넣어주면 전달되기 때문에 컴포넌트로 만들어서 전달한다.
