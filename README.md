@@ -86,4 +86,5 @@ Demo Link ⇒
 
 ## 7. 💥 Issue
 
-    -
+    - Unnecessary rending of components. (header, footer, buttons, cards)
+        => Improve performance with memo() and useCallback()
